@@ -1,0 +1,187 @@
+body {
+	background-image: url(img03/8.jpg);
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 25px;
+	color: #333;
+	background-repeat: no-repeat;
+    /* 这个是控制背景大小的重点 */
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+.contain{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+}
+
+
+.header{
+    height: 15%;
+    width: 100%;
+    position: relative;
+}
+
+.header_nav{
+
+    text-align: center;
+    color: rgb(255, 249, 249);
+}
+.header_p{
+    font-size: 45px;
+}
+
+.header_a{
+    width: 140px;
+    height: 180px;
+    background-color: white;
+    /* 水平垂直居中 */
+    margin: 250px auto;
+
+
+    background-color: #6495ED;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+}
+
+a{
+    /* font-style: italic; */
+    text-decoration: NONE;
+    font-size: 30px;
+    font-family:"Microsoft YaHei";
+    font-weight: 500;
+    color: rgb(255, 249, 249)
+}
+
+.user{
+    position: relative;
+    height: 20%;
+}
+
+.word{
+    height: 50%;
+}
+
+.footer{
+    height: 15%;
+}
+.user_nav{
+    float:left;
+
+    height:100px;
+    
+    width:100%;
+    
+    padding-right:20px;
+    
+    box-sizing:border-box;
+    
+    background-clip:content-box; 
+    /* 标签平均分布 */
+    text-align-last: justify;    
+}
+
+.footer_nav{
+    /* 居中 */
+    text-align: center;
+    color: rgb(255, 249, 249);
+    font-size: 15px;
+}
+/* 绝对布局 */
+.container{
+	width: 1300px;
+	height: 550px;
+	margin:60px auto;
+	position: absolute;
+    top: 150px;
+    margin-left: 150px;
+}
+ 
+/* 每张照片都自己定位，top距顶部多少，left距左边多少，right距右边多少 */
+.pic1{
+    top: 0;
+    right: 200px;
+    transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg);
+}
+ 
+.pic2{
+    left: 300px;
+    top: 10px;
+    transform:rotate(-20deg);
+    -webkit-transform:rotate(-20deg);
+}
+.pic3{
+    top: 220px;
+    right: 110px;
+    transform:rotate(5deg);
+    -webkit-transform:rotate(5deg);
+}
+ 
+.pic4{
+    top: 160px;
+    left: 450px;
+    transform:rotate(-10deg);
+    -webkit-transform:rotate(-10deg);
+}
+ 
+.pic5{
+    left: 600px;
+    top: 0;
+
+    transform:rotate(-10deg);
+    -webkit-transform:rotate(-10deg);
+}
+.pic6{
+    left: 10px;
+    top: 0;
+    transform:rotate(10deg);
+    -webkit-transform:rotate(10deg);
+}
+ 
+.pic7{
+    left: 700px;
+    top: 200px;
+    transform:rotate(20deg);
+    -webkit-transform:rotate(20deg);
+}
+.pic0{
+    bottom: -20px;
+    top: 190px;
+    left: 175px;
+    transform:rotate(5deg);
+    -webkit-transform:rotate(-15deg);
+}
+ 
+ 
+.container img{
+	 padding: 10px 10px 15px;
+    background: white;
+    /* 边框 */
+    border: 1px solid #ddd;
+    /* 照片阴影 */
+    box-shadow: 2px 2px 3px rgba(50,50,50,0.4);
+    /* 照片旋转，和变化的时间 */
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    position: absolute;
+    z-index: 1;
+}
+ 
+.pic{
+	width: 200px;
+	margin-right: 1%;
+}
+ /* 放大镜效果 */
+.container>img:hover{
+	 box-shadow: 15px 15px 20px rgba(50,50,50,0.4);
+    transform:rotate(0deg) scale(2.20);
+    -webkit-transform:rotate(0deg) scale(1.50);
+    z-index: 1000;
+}

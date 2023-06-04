@@ -1,0 +1,128 @@
+body {
+    /* 页面背景图片 */
+	background-image: url(img03/8.jpg);
+    /* 字体 */
+	font-family: "宋体";
+    /* 字大小 */
+	font-size: 12px;
+	line-height: 25px;
+    /* 字体颜色 */
+	color: #333;
+	background-repeat: no-repeat;
+    /* 控制背景大小的重点 */
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+/* 主体采用绝对定位 */
+/* 里面采用相对布局relative */
+.container{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+}
+/* 宽度都设计为100%覆盖，用流式布局 */
+
+.header{
+    height: 15%;
+    width: 100%;
+    position: relative;
+}
+
+.header_nav{
+     /* 文字水平居中 */
+    text-align: center;
+    color: rgb(255, 249, 249);
+}
+.header_p{
+    font-size: 45px;
+}
+
+.header_a{
+    width: 140px;
+    height: 180px;
+    background-color: white;
+    /* 水平垂直居中 */
+    margin: 250px auto;
+    background-color: #6495ED;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+}
+
+a{
+    /* font-style: italic; */
+    text-decoration: NONE;
+    font-size: 30px;
+    font-family:"Microsoft YaHei";
+    font-weight: 500;
+    color: rgb(255, 249, 249)
+}
+
+.user{
+    position: relative;
+    height: 20%;
+}
+
+.word{
+    height: 50%;
+}
+
+.footer{
+    height: 15%;
+}
+.user_nav{
+    float:left;
+
+    height:100px;
+    
+    width:100%;
+    
+    padding-right:20px;
+    
+    box-sizing:border-box;
+    
+    background-clip:content-box; 
+    /* 标签平均分布 */
+    text-align-last: justify;    
+}
+
+.footer_nav{
+    /* 居中 */
+    text-align: center;
+    color: rgb(255, 249, 249);
+    font-size: 15px;
+}
+
+.photo{
+    width: 100%;
+    position: relative;
+}
+.line
+{float:left;border:1px solid red; padding:10px;}
+
+.iu{
+    width:100%;
+    height: 350px;
+    /* background-color: red; */
+    display: flex;
+    display: -webkit-flex;
+    /* 从左端开始沿水平轴防止flex item */
+    flex-direction: row;
+    /* 强制 flex item不换行，沿着同一行堆叠 */
+    flex-wrap: nowrap;
+    /* flex item在主轴上的对齐方式，这里定义左对齐 */
+    justify-content: flex-start;
+    /* 定义交叉轴对其方式 */
+    align-items: flex-start
+  }
+  .lable {
+    width: 20%;
+    height: 400px;
+    margin-left: 55px;
+    /* background-color: blue; */
+    color: rgb(254, 249, 249);
+    /* 居中 */
+    text-align: center;
+    font-size: 15px;
+  }

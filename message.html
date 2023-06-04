@@ -1,0 +1,147 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>访客留言</title>
+<link rel="stylesheet" type="text/css" href="message.css"/>
+</head>
+
+<body>
+
+<!--container start-->
+<div class="container">
+	
+	<!--header start-->
+	<div class="header">
+		<div class="header_nav">
+			<p class="header_p">欢迎来到我的世界</p>
+		</div>
+	</div>
+	<!--header end-->
+	
+	<!--user start-->
+	<div class="user">
+
+		<div class="user_nav">
+			<a href="index.html">个人首页</a>
+			<a href="photo.html">生活瞬间</a>
+			<a href="jump.html">常用网站</a>
+			<a href="myself.html">个人简介</a>
+			<a href="life_sharing.html">个人日志</a>
+			<a href="message.html" class="select">访客留言</a>
+		</div>
+	</div>
+	<!--user end-->
+	
+	<!--word start-->
+	<div class="word">
+		<!-- 留言框和提交按钮 -->
+		<textarea></textarea>
+		<button>访客留言</button>
+		<!-- ul无序列表 -->
+		<ul></ul>
+
+         <!-- 一个表格标签 -->
+		 <!-- 表格内加入单选和复选框 -->
+		 <!-- tr定义行，td一行内的若干单元格 -->
+		 <!-- 里面放入了表单标签，用于收集用户信息，用于对话 -->
+		 <!-- form代表一个表单域 -->
+		<form  method="post">
+			<h1>访客信息</h1>
+			<table text-align="center">
+				<tr>
+					<td> 用户名称：</td>
+					<td>
+						<input type="text" name="username" value="易星宇"/>
+					</td>
+				</tr>
+				<tr>
+					<td> 用户密码：</td>
+					<!-- 密码输入，隐藏 -->
+					<td><input type="password" name="password" value="abc阿道夫安达阿道夫"/></td>
+				</tr>
+				 <tr>
+					<td>性别：</td>
+					<td>
+						<!-- 单选框 -->
+						<input type="radio" name="sex" value="boy"/>男
+						<input type="radio" name="sex" checked="checked" value="girl" />女
+					</td>
+				</tr>
+				 <tr>
+					<td> 兴趣爱好：</td>
+					<td>
+						<!-- 复选框 -->
+						<input name="hobby" type="checkbox" checked="checked" value="java"/>网球
+						<input name="hobby" type="checkbox" value="js"/>篮球
+						<input name="hobby" type="checkbox" value="cpp"/>足球
+					</td>
+				</tr>
+				 <tr>
+					<td>国籍：</td>
+					<td>
+						<select name="country">
+							<option value="none">--请选择国籍--</option>
+							<option value="cn" selected="selected">中国人</option>
+							<option value="usa">美国佬</option>
+							<option value="jp">小日本</option>
+						</select>
+					</td>
+				</tr>
+
+			</table>
+		</form>
+	</div>
+
+
+
+	<!--word end-->
+	
+	<!--footer start-->
+	<div class="footer">
+		<div class="footer_nav">
+			<p>知行合一，致良知</p>
+		</div>
+
+
+		
+	</div>
+	<!--footer end-->
+
+</div>
+<!--container end-->
+<script>
+	// 获取元素
+	var txt = document.querySelector("textarea");
+	var btn = document.querySelector("button");
+	var ul = document.querySelector("ul");
+	//给button绑定点击事件
+	btn.onclick = function () {
+		if (txt.value == "") {//当文本框中没有文字时，提示
+			alert("您没有输入内容")
+		} else {
+			//创建元素li作为留言区
+			var li = document.createElement("li");
+			//将文本框中的内容放到li中,a标签中href中的内容代表什么都不执行
+			li.innerHTML = txt.value + "<a href='javascript:;'>删除</a>"
+			txt.value = "";//添加之后文本框的内容清空
+			//将留言添加到ul中，而且在最上方
+			ul.insertBefore(li, ul.children[0]);
+			//当点击删除时删除ul中的li
+			var as = document.querySelectorAll("a");
+			//循环给每个删除绑定事件
+			for (var i = 0; i < as.length; i++) {
+				as[i].onclick = function () {
+					//删除当前a标签所在位置的父节点li
+					ul.removeChild(this.parentNode);
+				}
+			}
+		}
+	}
+</script>
+
+</body>
+</html>
+
+

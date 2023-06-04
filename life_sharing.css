@@ -1,0 +1,112 @@
+body {
+	background-image: url(img03/8.jpg);
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 25px;
+	color: rgb(250, 245, 245);
+	background-repeat: no-repeat;
+    /* 这个是控制背景大小的重点 */
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+.container{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+}
+
+
+.header{
+    height: 15%;
+    width: 100%;
+    position: relative;
+}
+
+.header_nav{
+
+    text-align: center;
+    color: rgb(255, 249, 249);
+}
+.header_p{
+    font-size: 45px;
+}
+
+.header_a{
+    width: 140px;
+    height: 180px;
+    background-color: white;
+    /* 水平垂直居中 */
+    margin: 250px auto;
+
+
+    background-color: #6495ED;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+}
+
+a{
+    /* font-style: italic; */
+    text-decoration: NONE;
+    font-size: 30px;
+    font-family:"Microsoft YaHei";
+    font-weight: 500;
+    color: rgb(255, 249, 249)
+}
+
+.user{
+    position: relative;
+    height: 20%;
+}
+
+.word{
+    height: 55%;
+}
+
+.footer{
+    height: 10%;
+}
+.user_nav{
+    float:left;
+
+    height:100px;
+    
+    width:100%;
+    
+    padding-right:20px;
+    
+    box-sizing:border-box;
+    /* 控制背景裁剪区域 */
+    background-clip:content-box; 
+    /* 标签平均分布 */
+    text-align-last: justify;    
+}
+
+.footer_nav{
+    /* 居中 */
+    text-align: center;
+    color: rgb(255, 249, 249);
+    font-size: 15px;
+}
+
+.date
+{
+font-size:10px;
+color:gray;
+margin:1px 20px;
+text-align:left;
+}
+
+/* 靠左边 */
+h2,h1{
+text-align:left;
+}
+/* 相对布局 */
+.head1{
+    position: relative;
+    height: 30%;
+    text-align: center;
+    color: aliceblue;
+}
